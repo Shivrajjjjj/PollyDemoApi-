@@ -1,0 +1,31 @@
+﻿@page
+@model PollyDemoApi.Pages.AddRetryLogModel
+
+@{
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>🔄 Log Retry</h2>
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label asp-for="NewRetryLog.PolicyName">Policy Name:</label>
+        <input asp-for="NewRetryLog.PolicyName" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="NewRetryLog.RetryCount">Retry Count:</label>
+        <input asp-for="NewRetryLog.RetryCount" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="NewRetryLog.Success">Success:</label>
+        <input asp-for="NewRetryLog.Success" type="checkbox" />
+    </div>
+    <div>
+        <label asp-for="NewRetryLog.Message">Message:</label>
+        <input asp-for="NewRetryLog.Message" class="form-control" />
+    </div>
+    <button type="submit">Log Retry</button>
+</form>
+
+<p style="color:red">@Model.Result</p>
