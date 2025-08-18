@@ -1,0 +1,30 @@
+﻿@page
+@model PollyDemoApi.Pages.AddApiRequestModel
+@{
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>🌐 Log API Request</h2>
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label asp-for="NewApiRequest.Endpoint">Endpoint:</label>
+        <input asp-for="NewApiRequest.Endpoint" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="NewApiRequest.StatusCode">Status Code:</label>
+        <input asp-for="NewApiRequest.StatusCode" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="NewApiRequest.Success">Success:</label>
+        <input asp-for="NewApiRequest.Success" type="checkbox" />
+    </div>
+    <div>
+        <label asp-for="NewApiRequest.RetryCount">Retry Count:</label>
+        <input asp-for="NewApiRequest.RetryCount" class="form-control" />
+    </div>
+    <button type="submit">Log Request</button>
+</form>
+
+<p style="color:red">@Model.Result</p>
