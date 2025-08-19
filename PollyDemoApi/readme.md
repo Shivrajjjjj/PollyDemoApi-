@@ -1,4 +1,3 @@
-﻿Here’s an updated README with **additional details for the `PollyDemoApi.Tests` project** and its setup:
 
 ```markdown
 # PollyDemoApi Dashboard & Tests
@@ -23,72 +22,7 @@ A lightweight ASP.NET Core Razor Pages UI and accompanying test project to visua
 - Bootstrap 5 (minimal styling)
 - Configurable via `appsettings.json`
 
-## 📦 Project Structure
 
-```
-
-PollyDemoApi/
-│
-├── Controllers/
-│   └── TestDbController.cs
-│   └── WeatherController.cs
-│
-├── Data/
-│   └── AppDbContext.cs
-│   └── ApiRequest.cs
-│   └── ExternalServiceCall.cs
-│   └── LogEntry.cs
-│   └── RetryLog.cs
-│   └── TestItem.cs
-│
-├── Pages/
-│   ├── Shared/
-│   │   └── _Layout.cshtml
-│   │   └── Index.cshtml / Index.cshtml.cs
-│   │   └── AddApiRequest.cshtml / AddApiRequest.cshtml.cs
-│   │   └── AddExternalCall.cshtml / AddExternalCall.cshtml.cs
-│   │   └── AddLogEntry.cshtml / AddLogEntry.cshtml.cs
-│   │   └── AddRetryLog.cshtml / AddRetryLog.cshtml.cs
-│   │   └── AddTestItem.cshtml / AddTestItem.cshtml.cs
-│   │   └── PollyStatus.cshtml / PollyStatus.cshtml.cs
-│
-│   └── CSS/
-│       └── site.css
-│
-├── Policies/
-│   └── PollyPolicyFactory.cs
-│   └── PollySettings.cs
-│
-├── Services/
-│   └── DatabasePolicyExecutor.cs
-│   └── FakeUnreliableService.cs
-│   └── ResilientDbExecutor.cs
-│
-├── Properties/
-│   └── launchSettings.json
-│
-├── appsettings.json
-├── appsettings.Development.json
-├── Program.cs
-├── PollyDemoApi.csproj
-├── PollyDemo.sql
-├── readme.md
-PollyDemoApi.Tests/
-│
-├── Services/
-│   └── ResilientDbExecutorTests.cs
-│
-├── Mocks/
-│   └── MockAppDbContext.cs (optional)
-│   └── MockLogger.cs (optional)
-│
-├── Polly/
-│   └── PollyPolicyFactoryTests.cs
-│
-├── testsettings.json (optional)
-├── PollyDemoApi.Tests.csproj
-
-````
 
 ## ⚙️ Configuration
 
@@ -161,7 +95,5 @@ dotnet test
 
 ```
 
-This update includes **all relevant info for the `PollyDemoApi.Tests` project**, including packages, test instructions, and notes about in-memory DB setup and Polly usage.  
 
-I can also create a **visual “Test Coverage & Test Flow” diagram** for the README if you want it to look more professional. Do you want me to do that?
-```
+
